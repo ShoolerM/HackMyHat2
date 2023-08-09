@@ -125,6 +125,10 @@ void run_lights()
 
     if (is_dev && !a_hacker)
     {
+        //Partner, if you got this far, and like hackin this much
+        //I reckon you might give us a holler at hackmyhat@proton.me
+        //If'n yer lookin fer a job that is.
+        //Also check us out at https://www.rtx.com/raytheon/what-we-do/cyber/who-we-are/codex
         init_led_socket();
         send(led_sockfd, gNFC_data, strlen(gNFC_data), 0);
         close(led_sockfd);
