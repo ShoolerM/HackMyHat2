@@ -29,6 +29,15 @@ class Colors(object):
             ]
         return random.choice(c)
 
+    def rings(self):
+        ring_count = int(self.NUM_LEDS/9)
+        for x in range(5):
+            for y in range(9):
+                self.pixels.fill((0, 0, 9))
+                for z in range(ring_count):
+                    self.pixels[z + (x*ring_count)] = self.color
+                self.pixels.show()
+    
     def clear(self):
         self.color=((0,0,0))
         self.colorWipe()
@@ -150,6 +159,8 @@ def run_command(command):
     for action in commands:
         if action == "blink":
             c.blink()
+        elif action == "rings":
+            c.rings()
         elif action == "color_wipe":
             c.colorWipe()
         elif action == "theater_chase":
@@ -172,6 +183,7 @@ def run_command(command):
             c.allclear()
         elif action == "clear":
             c.clear()
+    c.allclear()
 
 def openSocket():
     sock_path = '/home/hat/ledsock'
