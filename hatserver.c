@@ -108,6 +108,7 @@ void run_lights()
     /*
     Rundown of the light commands:
     blink = Blink
+    rings = Rings descend down the hat
     color_wipe = Color Wipe (1 Color)
     theater_chase = Theater Chase
     rainbow = Rainbow, like color wipe but rainbows
